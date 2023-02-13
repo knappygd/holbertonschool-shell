@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name ".*" -o -name "*gif" | while read filename; do echo "${filename%.*}" | rev | cut -d/ -f1 | rev; done | sort -f | tr '\n' '\n'; echo
+find -name *.gif -o -name .*.gif -type f | cut -d/ -f2- | cut -d'.' -f2 | LC_ALL=C sort
