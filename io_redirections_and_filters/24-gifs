@@ -1,0 +1,2 @@
+#!/bin/bash
+find -name *.gif -o -name .*.gif -type f | sed 's/\.gif$//' | cut -d/ -f2- | LC_ALL=C sort
